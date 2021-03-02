@@ -1,6 +1,6 @@
 # @secretlint/secretlint-rule-no-k8s-kind-secret
 
-A secretlint rule that disallow to use [Kind: Secret](https://kubernetes.io/docs/concepts/configuration/secret/) in Kubernetes repository. 
+A secretlint rule that disallow to use [kind: Secret](https://kubernetes.io/docs/concepts/configuration/secret/) in Kubernetes repository. 
 
 ## Install
 
@@ -25,9 +25,9 @@ Via `.secretlintrc.json`(Recommended)
 ## MessageIds
 
 ### disallowToUseKindSecret
-> disallow to use Kind: Secret in manifest: {{FILE_NAME}}
+> disallow to use kind: Secret in manifest: {{FILE_NAME}}
 
-Kubernetes's [`Kind: Secret`]((https://kubernetes.io/docs/concepts/configuration/secret)) includes credentials as plain format.
+Kubernetes's [`kind: Secret`]((https://kubernetes.io/docs/concepts/configuration/secret)) includes credentials as plain format.
 It just base64 encoded value.
 
 ```yaml
@@ -41,7 +41,7 @@ data:
   password: MWYyZDFlMmU2N2Rm
 ```
 
-So, `Kind: Secret` manifest is not committable file into a repository.
+So, `kind: Secret` manifest is not committable file into a repository.
 
 - [Secrets - Kubernetes](https://kubernetes.io/docs/concepts/configuration/secret/)
 

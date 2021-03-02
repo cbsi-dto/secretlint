@@ -9,8 +9,8 @@ import { safeLoadAll } from "js-yaml";
 
 export const messages = {
     disallowToUseKindSecret: {
-        en: (props: { FILE_NAME: string }) => `disallow to use Kind: Secret in manifest: ${props.FILE_NAME}`,
-        ja: (props: { FILE_NAME: string }) => `Kind: Secretのmanifestがみつかりました: ${props.FILE_NAME}`,
+        en: (props: { FILE_NAME: string }) => `disallow to use kind: Secret in manifest: ${props.FILE_NAME}`,
+        ja: (props: { FILE_NAME: string }) => `kind: Secretのmanifestがみつかりました: ${props.FILE_NAME}`,
     },
 };
 
@@ -30,8 +30,8 @@ function reportIfFoundKindSecret({
         // Support multi manifest
         const manifestObjects = safeLoadAll(source.content);
         manifestObjects.forEach((manifestObject) => {
-            // Kind: Secret
-            if (manifestObject["Kind"] !== "Secret") {
+            // kind: Secret
+            if (manifestObject["kind"] !== "Secret") {
                 return;
             }
             context.report({

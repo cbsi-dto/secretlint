@@ -1,7 +1,7 @@
 {
   "name": "@secretlint/secretlint-rule-no-k8s-kind-secret",
   "version": "2.1.1",
-  "description": "A secretlint rule that disallow to use Kind: Secret in Kubernetes repository.",
+  "description": "A secretlint rule that disallow to use kind: Secret in Kubernetes repository.",
   "keywords": [
     "rule",
     "secretlint"
