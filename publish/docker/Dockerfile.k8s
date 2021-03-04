@@ -1,0 +1,28 @@
+FROM node:12-alpine
+
+ENV SECRETLINTRC /.secretlintrc.json
+COPY .secretlintrc-k8s.json $SECRETLINTRC
+RUN set -ex \
+    && apk add git --no-cache \
+    && git clone -b fix-k8s-secret --depth 1 https://github.com/cbsi-dto/secretlint.git \
+        /opt/secretlint \
+    && cd /opt/secretlint \
+# delete rules not used
+    && find packages/@secretlint -type d -depth 1 |\
+        egrep -v "gcp|aws|basicauth|privatekey|slack|pattern|k8s"|grep rule|xargs rm -rf \
+# install tool and modules
+    && yarn install \
+    && yarn run build \
+    && ln -s ../../../opt/secretlint/packages/secretlint/bin/secretlint.js \
+        /usr/local/bin/secretlint \
+# clean up
+    && ls|egrep -v "package|node"|xargs rm -rf \
+    && for i in `find packages/@secretlint -type d -depth 1`; do \
+            ls ${i}|egrep -v "lib|src|package|node"|xargs rm -rf; \
+        done \
+    && apk del git \
+    && rm -rf /usr/local/share/.cache /opt/secretlint/.git /usr/share/man /tmp/* \
+            /root/.npm /root/.node-gyp \
+            /usr/lib/node_modules/npm/man \
+            /usr/lib/node_modules/npm/doc \
+            /usr/lib/node_modules/npm/html
