@@ -48,7 +48,7 @@
         "@secretlint/types": "^2.1.1",
         "@textlint/module-interop": "^1.0.2",
         "debug": "^4.1.1",
-        "rc-config-loader": "^3.0.0",
+        "rc-config-loader": "^4.1.2",
         "try-resolve": "^1.0.1"
     },
     "devDependencies": {
