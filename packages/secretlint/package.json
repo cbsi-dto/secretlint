@@ -50,9 +50,9 @@
         "@secretlint/node": "^2.1.1",
         "@secretlint/profiler": "^2.1.1",
         "debug": "^4.1.1",
-        "globby": "^11.0.0",
-        "meow": "^6.1.0",
-        "read-pkg": "^5.2.0"
+        "globby": "^11.1.0",
+        "meow": "^12.1.0",
+        "read-pkg": "^8.0.0"
     },
     "devDependencies": {
         "@secretlint/secretlint-rule-example": "^2.1.1",
