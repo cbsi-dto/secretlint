@@ -49,10 +49,10 @@
         "@secretlint/formatter": "^2.1.1",
         "@secretlint/node": "^2.1.1",
         "@secretlint/profiler": "^2.1.1",
-        "debug": "^4.1.1",
-        "globby": "^11.0.0",
-        "meow": "^6.1.0",
-        "read-pkg": "^5.2.0"
+        "debug": "^4.3.1",
+        "globby": "^11.1.0",
+        "meow": "^12.1.0",
+        "read-pkg": "^6.0.0"
     },
     "devDependencies": {
         "@secretlint/secretlint-rule-example": "^2.1.1",
