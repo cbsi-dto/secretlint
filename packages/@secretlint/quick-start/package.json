@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "@secretlint/secretlint-rule-preset-recommend": "^9.0.0",
-    "secretlint": "^9.0.0"
+    "secretlint": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.17.14",
