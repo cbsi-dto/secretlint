@@ -31,7 +31,7 @@
     "dependencies": {
         "@secretlint/secretlint-rule-preset-canary": "^9.0.0",
         "benchmark": "^2.1.4",
-        "secretlint": "^9.0.0"
+        "secretlint": "^0.1.0"
     },
     "publishConfig": {
         "access": "public"
