@@ -54,7 +54,7 @@
     "tabWidth": 4
   },
   "dependencies": {
-    "@secretlint/types": "^9.0.0",
+    "@secretlint/types": "^0.1.0",
     "@textlint/regexp-string-matcher": "^2.0.2",
     "node-forge": "^1.3.1"
   },
